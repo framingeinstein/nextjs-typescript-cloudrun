@@ -1,0 +1,25 @@
+{
+  "name": "with-typescript",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "start:production": "next start -p $PORT",
+    "type-check": "tsc",
+    "cloud:build": "gcloud builds submit --tag gcr.io/[project_id]/[name]",
+    "cloud:deploy": "gcloud run deploy --image gcr.io/[project_id]/[name] --platform managed"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.21",
+    "@types/react": "^16.9.16",
+    "@types/react-dom": "^16.9.4",
+    "typescript": "4.0"
+  },
+  "license": "MIT"
+}
